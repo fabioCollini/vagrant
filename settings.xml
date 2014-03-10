@@ -1,0 +1,37 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository/>
+  <interactiveMode/>
+  <usePluginRegistry/>
+  <offline/>
+  <pluginGroups/>
+  <servers/>
+  <mirrors/>
+  <proxies/>
+  <activeProfiles/>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Example for MySQL-->
+                <sonar.jdbc.url>
+                  jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
+                </sonar.jdbc.url>
+                <sonar.jdbc.username>root</sonar.jdbc.username>
+                <sonar.jdbc.password>vagrant</sonar.jdbc.password>
+ 
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://localhost:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+
+</settings>
