@@ -1,0 +1,60 @@
+{
+   "checksum": "d505e9f542e364362f96a1b3f227fa34",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13039136245560781",
+            "id": "6",
+            "name": "Jenkins",
+            "type": "url",
+            "url": "http://localhost:9080/"
+         }, {
+            "date_added": "13039137931758626",
+            "id": "8",
+            "name": "SonarQube",
+            "type": "url",
+            "url": "http://localhost:9000/"
+         }, {
+            "date_added": "13039136228576830",
+            "id": "5",
+            "name": "Sonatype Nexus",
+            "type": "url",
+            "url": "http://localhost:8081/nexus/index.html#welcome"
+         }, {
+            "date_added": "13039136174083927",
+            "id": "4",
+            "name": "Apache2",
+            "type": "url",
+            "url": "http://localhost/"
+         }, {
+            "date_added": "13039136448052143",
+            "id": "7",
+            "name": "phpMyAdmin",
+            "type": "url",
+            "url": "http://localhost/phpmyadmin/"
+         } ],
+         "date_added": "13039135976462560",
+         "date_modified": "13039137944199469",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13039135976462577",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13039135976462583",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
