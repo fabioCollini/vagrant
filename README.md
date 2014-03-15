@@ -1,4 +1,4 @@
-vagrant
+Vagrant: creating Xubuntu Trusty 32 bit 
 =======
 
 In this branch there is all you need to create a virtual machine with vagrant.
