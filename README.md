@@ -1,4 +1,4 @@
-Vagrant: creating Xubuntu Trusty 32 bit 
+Vagrant: creating Xubuntu Trusty (14.04 versione) 32 bit 
 =======
 
 In this repository there's all you need to create a virtual machine for Virtual Box with vagrant.
