@@ -16,3 +16,5 @@ The machine you create will be an Xubuntu Trusty (14.04) 32 bit with:
 * MySql
 * phpMyAdmin
 * Eclipse Kelpler
+* JBoss 7.1.1
+* Chrome Browser
