@@ -24,6 +24,9 @@ echo "------------------------"
 cd /tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*; sudo apt-get -f install -y
+mkdir /home/vagrant/.config/google-chrome/Default -p
+wget -N https://raw.github.com/lfiammetta/vagrant/master/chrome/Bookmarks -P /home/vagrant/.config/google-chrome/Default
+wget -N https://raw.github.com/lfiammetta/vagrant/master/chrome/Preferences -P /home/vagrant/.config/google-chrome/Default
 
 # http://localhost:9080
 # Jenkins plugin mirror: http://mirrors.jenkins-ci.org/plugins/
