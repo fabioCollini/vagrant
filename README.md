@@ -1,7 +1,7 @@
 Vagrant: creating Xubuntu Trusty 32 bit 
 =======
 
-In this branch there's all you need to create a virtual machine for Virtual Box with vagrant.
+In this repository there's all you need to create a virtual machine for Virtual Box with vagrant.
 
 The machine you'll create it is a Xubuntu Trusty (14.04) 32 bit with installed:
 * JDK 6
