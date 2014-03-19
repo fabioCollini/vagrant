@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#!/usr/bin/env bash
-
 echo 'Step 1 - Update packages list...'
 echo "------------------------"
 apt-get -y update
