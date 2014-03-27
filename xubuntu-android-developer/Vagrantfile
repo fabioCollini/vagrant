@@ -52,7 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize [
 	  "modifyvm", :id, 
-	  "--name", "Ubuntu Trusty 14.04 Developer",
+	  "--name", "Ubuntu Trusty 14.04 Android",
 	  "--memory", "2048",
 	  "--cpus", "1",
       "--vram", "128"
