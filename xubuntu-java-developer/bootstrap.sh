@@ -26,19 +26,19 @@ rm /tmp/google*chrome*.deb
 echo 'Step 5 - Install Eclipse Kepler...'
 echo "------------------------"
 wget http://mirror.netcologne.de/eclipse/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk.tar.gz -P /tmp
-sudo tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /usr/lib/
+sudo tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /opt/
 rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
-sudo ln -s /usr/lib/eclipse/eclipse /usr/bin/eclipse
+sudo ln -s /opt/eclipse/eclipse /usr/bin/eclipse
 
 echo 'Step 6 - Install JBoss Tools...'
 echo "------------------------"
 wget http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Update-4.1.1.Final_2013-12-08_01-06-33-B605.zip -P /tmp
 wget -N https://raw.github.com/lfiammetta/vagrant/master/eclipse/install.xml -P /tmp
-sudo /usr/lib/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+sudo /opt/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
 /tmp/install.xml \
 -DsourceZip=/tmp/jbosstools-Update-4.1.1.Final_2013-12-08_01-06-33-B605.zip \
 -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/ \
--DtargetDir=/usr/lib/eclipse/
+-DtargetDir=/opt/eclipse/
 rm /tmp/install.xml
 rm /tmp/jbosstools*.zip
 
