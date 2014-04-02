@@ -27,8 +27,8 @@ echo 'Step 5 - Install Eclipse Kepler...'
 echo "------------------------"
 wget http://mirror.netcologne.de/eclipse/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk.tar.gz -P /tmp
 sudo tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /opt/
-rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
 sudo ln -s /opt/eclipse/eclipse /usr/bin/eclipse
+rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
 
 echo 'Step 6 - Install JBoss Tools...'
 echo "------------------------"
