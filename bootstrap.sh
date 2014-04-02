@@ -11,7 +11,7 @@ apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad 
 
 echo 'Step 3 - Install JDK 7 in /usr/lib/jvm/java-7-oracle...'
 echo "------------------------"
-add-apt-repository ppa:webupd8team/java
+add-apt-repository ppa:webupd8team/java -y
 apt-get update -y
 echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
