@@ -46,10 +46,10 @@ echo 'Step 7 - Install Subversive and connectors...'
 echo "------------------------"
 wget http://mirror.netcologne.de/eclipse/technology/subversive/1.1/builds/kepler/Subversive-1.1.3.I20140206-1700.zip -P /tmp
 unzip /tmp/Subversive-1.1.3.I20140206-1700.zip -d /tmp/Subversive
-sudo mv /tmp/Subversive/plugins/* /usr/lib/eclipse/plugins/
+sudo mv /tmp/Subversive/plugins/* /opt/eclipse/plugins/
 wget http://community.polarion.com/projects/subversive/download/eclipse/3.0/builds/Subversive-connectors-3.0.5.I20140122-1700.zip -P /tmp
 unzip /tmp/Subversive-connectors-3.0.5.I20140122-1700.zip -d /tmp/Connectors
-sudo mv /tmp/Connectors/plugins/* /usr/lib/eclipse/plugins/
+sudo mv /tmp/Connectors/plugins/* /opt/eclipse/plugins/
 rm /tmp/Subversive* -R
 rm /tmp/Connectors* -R
 
