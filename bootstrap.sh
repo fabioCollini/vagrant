@@ -128,7 +128,7 @@ echo 'Step 14 - Install JBoss Tools...'
 echo "------------------------"
 cd /tmp
 wget http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Update-4.1.1.Final_2013-12-08_01-06-33-B605.zip -P /tmp
-wget -N https://raw.github.com/lfiammetta/vagrant/master/eclipse/install.xml -P /tmp
+wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/eclipse/install.xml -P /tmp
 sudo /usr/lib/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
 /tmp/install.xml \
 -DsourceZip=/tmp/jbosstools-Update-4.1.1.Final_2013-12-08_01-06-33-B605.zip \
