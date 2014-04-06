@@ -10,7 +10,13 @@
     </mirror>
   </mirrors>
   <proxies></proxies>
-  <servers></servers>
+  <servers>
+    <server>
+      <id>deploymentRepo</id>
+      <username>deployment</username>
+      <password>deployment123</password>
+    </server>
+  </servers>
   <pluginGroups></pluginGroups>
   <profiles>
 
