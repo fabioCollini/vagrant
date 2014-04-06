@@ -160,6 +160,6 @@ apt-get install -y oracle-java6-installer
 
 echo 'Step 18 - Generate Sonar database...'
 echo "------------------------"
-sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/mysql/sonar.sql -P /tmp/
+sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/mysql/sonar.sql -P /tmp/
 sudo mysql -u root --password=vagrant < /tmp/sonar.sql
 
