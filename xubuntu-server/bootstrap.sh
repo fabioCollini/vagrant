@@ -113,3 +113,8 @@ sudo chmod 755 /etc/init.d/nexus
 sudo update-rc.d nexus defaults
 sudo service nexus start
 rm /tmp/nexus-latest-bundle.tar.gz
+
+echo 'Step 15 - Download settings.xml...'
+echo "------------------------"
+mkdir -p /home/vagrant/.m2
+wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/maven/settings.xml -P /home/vagrant/.m2
