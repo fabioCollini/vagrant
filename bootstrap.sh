@@ -85,7 +85,7 @@ echo "------------------------"
 sudo apt-cache search maven
 sudo apt-get install maven -y
 mkdir -p /home/vagrant/.m2
-wget -N https://raw.github.com/lfiammetta/vagrant/master/maven/settings.xml -P /home/vagrant/.m2
+wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/maven/settings.xml -P /home/vagrant/.m2
 
 echo 'Step 9 - Install Git in /usr/bin/git...'
 echo "------------------------"
