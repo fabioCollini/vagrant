@@ -38,9 +38,9 @@ sudo sed -i 's/HTTP_PORT=8080/HTTP_PORT=9080/g' /etc/default/jenkins
 sudo wget http://mirrors.jenkins-ci.org/plugins/git-client/latest/git-client.hpi -P /var/lib/jenkins/plugins/
 sudo wget http://mirrors.jenkins-ci.org/plugins/scm-api/latest/scm-api.hpi -P /var/lib/jenkins/plugins/
 sudo wget http://mirrors.jenkins-ci.org/plugins/git/latest/git.hpi -P /var/lib/jenkins/plugins/
-sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/jenkins/config.xml -P /var/lib/jenkins/
-sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/jenkins/hudson.plugins.git.GitTool.xml -P /var/lib/jenkins/
-sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/jenkins/hudson.tasks.Maven.xml -P /var/lib/jenkins/
+sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/jenkins/config.xml -P /var/lib/jenkins/
+sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/jenkins/hudson.plugins.git.GitTool.xml -P /var/lib/jenkins/
+sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/jenkins/hudson.tasks.Maven.xml -P /var/lib/jenkins/
 sudo /etc/init.d/jenkins restart
 
 
