@@ -61,7 +61,7 @@ export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
 
 echo 'Step 11 - Generate Sonar database...'
 echo "------------------------"
-wget -N https://raw.github.com/lfiammetta/vagrant/master/mysql/sonar.sql -P /tmp/
+wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/mysql/sonar.sql -P /tmp/
 sudo mysql -u root --password=vagrant < /tmp/sonar.sql
 rm /tmp/sonar.sql
 
