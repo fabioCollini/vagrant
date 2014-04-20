@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-echo 'Step 1 - Update packages list...'
+echo 'Update packages list...'
 echo "------------------------"
 sudo apt-get -y update
 
-echo 'Step 2 - Install Xubuntu Desktop & co...'
+echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad \
 xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu
 
-echo 'Step 3 - Install JDK 7 in /usr/lib/jvm/java-7-oracle...'
+echo 'Install JDK 7 in /usr/lib/jvm/java-7-oracle...'
 echo "------------------------"
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update -y
@@ -18,39 +18,39 @@ sudo echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf
 sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install -y oracle-jdk7-installer
 
-echo 'Step 4 - Install Chrome...'
+echo 'Install Chrome...'
 echo "------------------------"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb -P /tmp
 sudo dpkg -i /tmp/google-chrome*; sudo apt-get -f install -y
 rm /tmp/google*chrome*.deb
 
 # Directory della repository che crea Jenkins al primo lancio di un job: /var/lib/jenkins/.m2/repository
-echo 'Step 5 - Install Maven in /usr/share/maven...'
+echo 'Install Maven in /usr/share/maven...'
 echo "------------------------"
 sudo apt-cache search maven
 sudo apt-get install maven -y
 
-echo 'Step 6 - Install Git in /usr/bin/git...'
+echo 'Install Git in /usr/bin/git...'
 echo "------------------------"
 sudo apt-get install git -y
 
 # http://localhost/
-echo 'Step 7 - Install Apache2...'
+echo 'Install Apache2...'
 echo "------------------------"
 sudo apt-get install apache2 -y
 
-echo 'Step 8 - Install PHP 5...'
+echo 'Install PHP 5...'
 echo "------------------------"
 sudo apt-get install php5 -y
 
-echo 'Step 9 - Install MySql...'
+echo 'Install MySql...'
 echo "------------------------"
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password vagrant'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vagrant'
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install mysql-server
 
 # http://localhost/phpmyadmin/
-echo 'Step 10 - Install phpMyAdmin...'
+echo 'Install phpMyAdmin...'
 echo "------------------------"
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password vagrant'
@@ -59,7 +59,7 @@ sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password v
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'﻿
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
 
-echo 'Step 11 - Generate Sonar database...'
+echo 'Generate Sonar database...'
 echo "------------------------"
 wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/mysql/sonar.sql -P /tmp/
 sudo mysql -u root --password=vagrant < /tmp/sonar.sql
@@ -67,7 +67,7 @@ rm /tmp/sonar.sql
 
 # http://localhost:9080
 # Jenkins plugin mirror: http://mirrors.jenkins-ci.org/plugins/
-echo 'Step 12 - Install Jenkins CI in /var/lib/jenkins/ and Git Plugin...'
+echo 'Install Jenkins CI in /var/lib/jenkins/ and Git Plugin...'
 echo "------------------------"
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -83,7 +83,7 @@ sudo wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/jenkins/h
 sudo /etc/init.d/jenkins restart
 
 # http://localhost:9000
-echo 'Step 13 - Install SonarQube in /opt/sonar...'
+echo 'Install SonarQube in /opt/sonar...'
 echo "------------------------"
 sudo sh -c 'echo deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/ > /etc/apt/sources.list.d/sonar.list'
 sudo apt-get update -y
@@ -98,7 +98,7 @@ sudo update-rc.d sonar defaults
 sudo service sonar start
 
 # http://localhost:8081/nexus
-echo 'Step 14 - Install Nexus Sonatype...'
+echo 'Install Nexus Sonatype...'
 echo "------------------------"
 sudo mkdir /usr/local/nexus
 wget http://www.sonatype.org/downloads/nexus-latest-bundle.tar.gz -P /tmp
@@ -114,7 +114,7 @@ sudo update-rc.d nexus defaults
 sudo service nexus start
 rm /tmp/nexus-latest-bundle.tar.gz
 
-echo 'Step 15 - Download settings.xml...'
+echo 'Download settings.xml...'
 echo "------------------------"
 mkdir -p /home/vagrant/.m2
 wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/maven/settings.xml -P /home/vagrant/.m2
