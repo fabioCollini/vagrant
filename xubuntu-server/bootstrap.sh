@@ -10,6 +10,11 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad \
 xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu
 
+echo 'Install italian timezone...'
+echo "------------------------"
+echo "Europe/Rome" | sudo tee /etc/timezone
+sudo dpkg-reconfigure --frontend noninteractive tzdata
+
 echo 'Install JDK 7 in /usr/lib/jvm/java-7-oracle...'
 echo "------------------------"
 sudo add-apt-repository ppa:webupd8team/java -y
