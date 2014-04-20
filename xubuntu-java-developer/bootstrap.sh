@@ -8,7 +8,12 @@ echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad \
-xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils xfce4-whiskermenu-plugin
+xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils xfce4-whiskermenu-plugin \
+language-pack-it
+
+echo 'Set italian locale...'
+sudo update-locale LANG="it_IT.UTF-8" LANGUAGE="it_IT"
+sudo dpkg-reconfigure locales
 
 echo 'Set italian timezone...'
 echo "------------------------"
