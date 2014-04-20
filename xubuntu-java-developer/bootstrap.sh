@@ -8,7 +8,7 @@ echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad \
-xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils
+xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils xfce4-whiskermenu-plugin
 
 echo 'Set italian timezone...'
 echo "------------------------"
