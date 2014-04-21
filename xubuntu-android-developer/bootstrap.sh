@@ -38,6 +38,10 @@ echo 'Create development directory...'
 echo "------------------------"
 mkdir /home/vagrant/Development
 
+# open shell and write 'eclipse' to launch it
 echo 'Install ADT Bundle 22...'
 echo "------------------------"
 wget http://dl.google.com/android/adt/22.6.2/adt-bundle-linux-x86-20140321.zip -P /tmp
+unzip /tmp/adt-bundle-linux-x86-20140321.zip -d /home/vagrant/Development/
+sudo ln -s /home/vagrant/Development/adt-bundle-linux-x86-20140321/eclipse/eclipse /usr/bin/eclipse
+
