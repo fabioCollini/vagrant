@@ -5,6 +5,13 @@ In this repository there's all you need to create a virtual machine for Virtual 
 
 The machine you'll create it's a Xubuntu Trusty (14.04) 32 bit.
 
+### Xubuntu Android Developer
+
+This machine will have installed:
+* JDK 7
+* ADT Bundle 22
+* Chrome Browser
+
 ### Xubuntu Java Developer
 
 This machine will have installed:
