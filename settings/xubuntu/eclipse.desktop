@@ -3,7 +3,7 @@ Version=1.0
 Name=Eclipse
 Exec=env UBUNTU_MENUPROXY= eclipse
 Terminal=false
-Icon=/usr/lib/eclipse/icon.xpm
+Icon=/home/vagrant/Development/eclipse/icon.xpm
 Type=Application
 Categories=IDE;Development
 X-Ayatana-Desktop-Shortcuts=NewWindow
