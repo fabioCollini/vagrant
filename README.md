@@ -16,8 +16,12 @@ This machine will have installed:
 
 This machine will have installed:
 * JDK 6
-* Eclipse Kepler (with JBoss tools and SVN plugin)
+* Eclipse JEE Kepler (with JBoss tools and SVN plugin)
 * JBoss 7.1.1
+* Apache2
+* PHP 5
+* MySql
+* phpMyAdmin
 * Chrome Browser
 
 ### Xubuntu Server
