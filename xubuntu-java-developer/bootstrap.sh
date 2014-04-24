@@ -103,3 +103,8 @@ sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
+
+echo 'Install Git and create local repository directory'
+echo "------------------------"
+sudo apt-get install git -y
+mkdir /home/vagrant/Development/git
