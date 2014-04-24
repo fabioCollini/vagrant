@@ -91,6 +91,8 @@ echo "------------------------"
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install mysql-server
+sudo sed -i '$a lower_case_table_names  = 1' /etc/mysql/my.cnf
+sudo service mysql restart
 
 # http://localhost/phpmyadmin/
 echo 'Install phpMyAdmin...'
