@@ -28,13 +28,16 @@ sudo echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf
 sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install -y oracle-jdk7-installer
 
+echo 'Install JDK 6 in /usr/lib/jvm/java-6-oracle...'
+sudo apt-get install -y oracle-java6-installer
+
 echo 'Install Chrome...'
 echo "------------------------"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb -P /tmp
 sudo dpkg -i /tmp/google-chrome*; sudo apt-get -f install -y
 rm /tmp/google*chrome*.deb
 
-# Directory della repository che crea Jenkins al primo lancio di un job: /var/lib/jenkins/.m2/repository
+# Directory of the repository that creates Jenkins at first launch of a job: /var/lib/jenkins/.m2/repository
 echo 'Install Maven in /usr/share/maven...'
 echo "------------------------"
 sudo apt-cache search maven
