@@ -20,6 +20,10 @@ echo "------------------------"
 echo "Europe/Rome" | sudo tee /etc/timezone
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
+echo 'Set italian keyboard layout...'
+echo "------------------------"
+sudo sed -i 's/XKBLAYOUT="us"/XKBLAYOUT="it"/g' /etc/default/keyboard
+
 echo 'Install JDK 7 in /usr/lib/jvm/java-7-oracle...'
 echo "------------------------"
 sudo add-apt-repository ppa:webupd8team/java -y
