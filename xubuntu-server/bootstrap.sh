@@ -55,24 +55,24 @@ sudo apt-get install php5 -y
 
 echo 'Install MySql...'
 echo "------------------------"
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password vagrant'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vagrant'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install mysql-server
 
 # http://localhost/phpmyadmin/
 echo 'Install phpMyAdmin...'
 echo "------------------------"
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
-sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password vagrant'
-sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password vagrant'
-sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password vagrant'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'﻿
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
 
 echo 'Generate Sonar database...'
 echo "------------------------"
 wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/mysql/sonar.sql -P /tmp/
-sudo mysql -u root --password=vagrant < /tmp/sonar.sql
+sudo mysql -u root --password=root < /tmp/sonar.sql
 rm /tmp/sonar.sql
 
 # http://localhost:9080
