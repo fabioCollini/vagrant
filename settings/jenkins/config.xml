@@ -17,6 +17,11 @@
       <home>/usr/lib/jvm/java-7-oracle</home>
       <properties/>
     </jdk>
+    <jdk>
+      <name>JDK 1.6.0_45</name>
+      <home>/usr/lib/jvm/java-6-oracle</home>
+      <properties/>
+    </jdk>
   </jdks>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
