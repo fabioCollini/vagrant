@@ -9,11 +9,7 @@ echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad \
 xubuntu-icon-theme xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils xfce4-whiskermenu-plugin \
-language-pack-it xarchiver filezilla gitg
-
-echo 'Set italian locale...'
-sudo update-locale LANG="it_IT.UTF-8" LANGUAGE="it_IT"
-sudo dpkg-reconfigure locales
+xarchiver filezilla
 
 echo 'Install italian timezone...'
 echo "------------------------"
