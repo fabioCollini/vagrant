@@ -31,7 +31,7 @@
                   jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
                 </sonar.jdbc.url>
                 <sonar.jdbc.username>root</sonar.jdbc.username>
-                <sonar.jdbc.password>vagrant</sonar.jdbc.password>
+                <sonar.jdbc.password>root</sonar.jdbc.password>
  
                 <!-- Optional URL to server. Default value is http://localhost:9000 -->
                 <sonar.host.url>
