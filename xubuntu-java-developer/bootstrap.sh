@@ -37,6 +37,7 @@ rm /tmp/google*chrome*.deb
 echo 'Create Development directory...'
 echo "------------------------"
 mkdir Development
+sudo chmod 777 /home/vagrant/Development/
 
 echo 'Install Eclipse JEE Kepler...'
 echo "------------------------"
