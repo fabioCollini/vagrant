@@ -44,7 +44,6 @@ echo "------------------------"
 wget http://mirror.netcologne.de/eclipse/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk.tar.gz -P /tmp
 tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /home/vagrant/Development/
 sudo ln -s /home/vagrant/Development/eclipse/eclipse /usr/bin/eclipse
-ln -s /home/vagrant/Development/eclipse/eclipse /home/vagrant/Desktop/eclipse
 wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/xubuntu/eclipse.desktop -P /tmp
 sudo mv /tmp/eclipse.desktop /usr/share/applications/
 rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
