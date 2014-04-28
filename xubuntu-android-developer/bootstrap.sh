@@ -37,6 +37,7 @@ rm /tmp/google*chrome*.deb
 echo 'Create development directory...'
 echo "------------------------"
 mkdir /home/vagrant/Development
+sudo chmod 777 /home/vagrant/Development/
 
 # open shell and write 'eclipse' to launch it
 echo 'Install ADT Bundle 22...'
