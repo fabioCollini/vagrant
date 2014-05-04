@@ -10,7 +10,6 @@ The machine you'll create it's a Xubuntu Trusty (14.04) 32 bit.
 This machine will have installed:
 * JDK 7
 * ADT Bundle 22
-* Chrome Browser
 
 ### Xubuntu Java Developer
 
