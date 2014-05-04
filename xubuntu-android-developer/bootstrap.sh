@@ -8,7 +8,7 @@ echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad xubuntu-icon-theme \
-xfce4-goodies xubuntu-wallpapers gksu firefox cifs-utils xfce4-whiskermenu-plugin \
+xfce4-goodies xubuntu-wallpapers gksu cifs-utils xfce4-whiskermenu-plugin \
 xarchiver filezilla
 
 echo 'Set italian timezone...'
@@ -27,12 +27,6 @@ sudo apt-get update -y
 sudo echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 sudo apt-get install -y oracle-jdk7-installer
-
-echo 'Install Chrome...'
-echo "------------------------"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb -P /tmp
-sudo dpkg -i /tmp/google-chrome*; sudo apt-get -f install -y
-rm /tmp/google*chrome*.deb
 
 echo 'Create development directory...'
 echo "------------------------"
