@@ -31,7 +31,7 @@ sudo apt-get install -y oracle-jdk7-installer
 echo 'Create development directory...'
 echo "------------------------"
 mkdir /home/vagrant/Development
-sudo chmod 777 /home/vagrant/Development/
+sudo chmod 777 /home/vagrant/Development/ -R
 
 # open shell and write 'eclipse' to launch it
 echo 'Install ADT Bundle 22...'
