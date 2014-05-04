@@ -38,6 +38,11 @@ This machine will have installed:
 * phpMyAdmin
 * Chrome Browser
 
+## Prerequisite
+The only application you must have installed on your computer are:
+* Vagrant: http://www.vagrantup.com/
+* Virtualbox: https://www.virtualbox.org/
+
 ## Step 1
 
 After you installed vagrant on your computer, choice a folder where you put:
