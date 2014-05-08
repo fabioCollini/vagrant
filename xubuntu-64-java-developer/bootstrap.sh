@@ -42,7 +42,7 @@ echo "------------------------"
 mkdir Development
 sudo chmod 777 /home/vagrant/Development/
 
-echo 'Install Eclipse JEE Kepler...'
+echo 'Install Eclipse JEE Kepler SR2...'
 echo "------------------------"
 wget http://eclipse.mirror.garr.it/mirrors/eclipse//technology/epp/downloads/release/kepler/SR2/eclipse-jee-kepler-SR2-linux-gtk-x86_64.tar.gz -P /tmp
 tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /home/vagrant/Development/
@@ -51,3 +51,8 @@ wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/xubuntu/eclips
 sudo mv /tmp/eclipse.desktop /usr/share/applications/
 rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
 
+echo 'Install Tomcat 7.0.39...'
+echo "------------------------"
+wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.39/bin/apache-tomcat-7.0.39.tar.gz -P /tmp
+tar xzf /tmp/apache-tomcat*.tar.gz -C /home/vagrant/Development/
+rm /tmp/apache-tomcat*.tar.gz
