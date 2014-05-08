@@ -1,9 +1,9 @@
-Vagrant: creating Xubuntu Trusty (14.04 version) 32 bit 
+Vagrant: creating Xubuntu Trusty (14.04 version) 32 or 64 bit
 =======
 
 In this repository there's all you need to create a virtual machine for Virtual Box with vagrant.
 
-The machine you'll create it's a Xubuntu Trusty (14.04) 32 bit.
+The machine you'll create it's a Xubuntu Trusty (14.04) 32 or 64 bit.
 
 ### Xubuntu Android Developer
 
