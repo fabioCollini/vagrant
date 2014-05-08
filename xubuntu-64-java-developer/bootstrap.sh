@@ -56,3 +56,9 @@ echo "------------------------"
 wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.39/bin/apache-tomcat-7.0.39.tar.gz -P /tmp
 tar xzf /tmp/apache-tomcat*.tar.gz -C /home/vagrant/Development/
 rm /tmp/apache-tomcat*.tar.gz
+
+echo 'Install Git and create local repository directory'
+echo "------------------------"
+sudo apt-get install git -y
+mkdir /home/vagrant/Development/git
+
