@@ -41,7 +41,7 @@ sudo chmod 777 /home/vagrant/Development/
 
 echo 'Install Eclipse JEE Kepler...'
 echo "------------------------"
-wget http://mirror.netcologne.de/eclipse/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk.tar.gz -P /tmp
+wget http://www.rcp-vision.com/eclipse/eclipseMirror/technology/epp/downloads/release/kepler/SR2/eclipse-jee-kepler-SR2-linux-gtk.tar.gz -P /tmp
 tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /home/vagrant/Development/
 sudo ln -s /home/vagrant/Development/eclipse/eclipse /usr/bin/eclipse
 wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/xubuntu/eclipse.desktop -P /tmp
