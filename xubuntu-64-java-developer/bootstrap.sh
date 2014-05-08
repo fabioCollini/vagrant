@@ -36,3 +36,18 @@ sudo apt-get install -y oracle-jdk7-installer
 
 echo 'Install JDK 6 in /usr/lib/jvm/java-6-oracle...'
 sudo apt-get install -y oracle-java6-installer
+
+echo 'Create Development directory...'
+echo "------------------------"
+mkdir Development
+sudo chmod 777 /home/vagrant/Development/
+
+echo 'Install Eclipse JEE Kepler...'
+echo "------------------------"
+wget http://eclipse.mirror.garr.it/mirrors/eclipse//technology/epp/downloads/release/kepler/SR2/eclipse-jee-kepler-SR2-linux-gtk-x86_64.tar.gz -P /tmp
+tar xzf /tmp/eclipse-jee-*-linux-gtk*.tar.gz -C /home/vagrant/Development/
+sudo ln -s /home/vagrant/Development/eclipse/eclipse /usr/bin/eclipse
+wget -N https://raw.github.com/lfiammetta/vagrant/master/settings/xubuntu/eclipse.desktop -P /tmp
+sudo mv /tmp/eclipse.desktop /usr/share/applications/
+rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
+
