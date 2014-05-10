@@ -22,6 +22,9 @@ This machine will have installed:
 * MySql
 * phpMyAdmin
 * Chrome Browser
+* Git
+* Maven
+* DBeaver 2.4.0
 
 ### Xubuntu Server
 
