@@ -69,7 +69,7 @@ sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean 
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password root'
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password root'
 sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
-sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'﻿
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'
 export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
 
 echo 'Generate Sonar database...'
