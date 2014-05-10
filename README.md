@@ -15,6 +15,7 @@ This machine will have installed:
 
 This machine will have installed:
 * JDK 6
+* JDK 7
 * Eclipse JEE Kepler (with JBoss tools and SVN plugin)
 * JBoss 7.1.1
 * Apache2
