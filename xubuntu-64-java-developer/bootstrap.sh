@@ -57,10 +57,43 @@ wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.39/bin/apache-tomcat-7.
 tar xzf /tmp/apache-tomcat*.tar.gz -C /home/vagrant/Development/
 rm /tmp/apache-tomcat*.tar.gz
 
+# http://localhost/
+echo 'Install Apache2...'
+echo "------------------------"
+sudo apt-get install apache2 -y
+
+echo 'Install PHP 5...'
+echo "------------------------"
+sudo apt-get install php5 -y
+
+echo 'Install MySql...'
+echo "------------------------"
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install mysql-server
+
+# http://localhost/phpmyadmin/
+echo 'Install phpMyAdmin...'
+echo "------------------------"
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2'
+export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
+
+echo 'Install DBeaver 2.4.0...'
+echo "------------------------"
+wget -c http://dbeaver.jkiss.org/files/dbeaver_2.4.0_amd64.deb -P /tmp
+sudo dpkg -i /tmp/dbeaver_2.4.0_amd64.deb
+sudo apt-get install -f
+rm /tmp/dbeaver*.deb
+
 echo 'Install Git and create local repository directory'
 echo "------------------------"
 sudo apt-get install git -y
 mkdir /home/vagrant/Development/git
+sudo chmod 777 /home/vagrant/Development/git
 
 echo 'Install Maven in /usr/share/maven...'
 echo "------------------------"
