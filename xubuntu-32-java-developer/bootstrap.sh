@@ -108,3 +108,10 @@ echo 'Install Git and create local repository directory'
 echo "------------------------"
 sudo apt-get install git -y
 mkdir /home/vagrant/Development/git
+
+echo 'Install DBeaver 2.4.0...'
+echo "------------------------"
+wget -c http://dbeaver.jkiss.org/files/dbeaver_2.4.0_i386.deb -P /tmp
+sudo dpkg -i /tmp/dbeaver_2.4.0_i386.deb
+sudo apt-get install -f
+rm /tmp/dbeaver*.deb
