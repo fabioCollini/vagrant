@@ -108,6 +108,12 @@ echo 'Install Git and create local repository directory'
 echo "------------------------"
 sudo apt-get install git -y
 mkdir /home/vagrant/Development/git
+sudo chmod 777 /home/vagrant/Development/git
+
+echo 'Install Maven in /usr/share/maven...'
+echo "------------------------"
+sudo apt-cache search maven
+sudo apt-get install maven -y
 
 echo 'Install DBeaver 2.4.0...'
 echo "------------------------"
