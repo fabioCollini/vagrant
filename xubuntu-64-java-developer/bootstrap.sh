@@ -39,8 +39,9 @@ sudo apt-get install -y oracle-java6-installer
 
 echo 'Create Development directory...'
 echo "------------------------"
-mkdir Development
-sudo chmod 777 /home/vagrant/Development/
+mkdir /home/vagrant/Development
+mkdir /home/vagrant/Development/git
+sudo chmod 777 -R /home/vagrant/Development/
 
 echo 'Install Eclipse JEE Kepler SR2...'
 echo "------------------------"
@@ -92,8 +93,6 @@ rm /tmp/dbeaver*.deb
 echo 'Install Git and create local repository directory'
 echo "------------------------"
 sudo apt-get install git -y
-mkdir /home/vagrant/Development/git
-sudo chmod 777 /home/vagrant/Development/git
 
 echo 'Install Git Flow...'
 echo "------------------------"
