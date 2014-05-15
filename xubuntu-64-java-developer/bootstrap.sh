@@ -100,9 +100,3 @@ echo "------------------------"
 sudo apt-cache search maven
 sudo apt-get install maven -y
 
-echo 'Install DBeaver 2.4.0...'
-echo "------------------------"
-wget -c http://dbeaver.jkiss.org/files/dbeaver_2.4.0_amd64.deb -P /tmp
-sudo dpkg -i /tmp/dbeaver_2.4.0_amd64.deb
-sudo apt-get install -f
-rm /tmp/dbeaver*.deb
