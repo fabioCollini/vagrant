@@ -39,8 +39,9 @@ rm /tmp/google*chrome*.deb
 
 echo 'Create Development directory...'
 echo "------------------------"
-mkdir Development
-sudo chmod 777 /home/vagrant/Development/
+mkdir /home/vagrant/Development
+mkdir /home/vagrant/Development/git
+sudo chmod 777 -R /home/vagrant/Development/
 
 echo 'Install Eclipse JEE Kepler...'
 echo "------------------------"
@@ -110,8 +111,6 @@ export DEBIAN_FRONTEND=noninteractive && sudo apt-get -q -y install phpmyadmin
 echo 'Install Git and create local repository directory'
 echo "------------------------"
 sudo apt-get install git -y
-mkdir /home/vagrant/Development/git
-sudo chmod 777 /home/vagrant/Development/git
 
 echo 'Install Git Flow...'
 echo "------------------------"
