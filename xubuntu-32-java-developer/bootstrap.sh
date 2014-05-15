@@ -113,6 +113,12 @@ sudo apt-get install git -y
 mkdir /home/vagrant/Development/git
 sudo chmod 777 /home/vagrant/Development/git
 
+echo 'Install Git Flow...'
+echo "------------------------"
+wget -q – http://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh –no-check-certificate -P /tmp
+sudo chmod a+x /tmp/gitflow-installer.sh
+sudo sh /tmp/gitflow-installer.sh
+
 echo 'Install Maven in /usr/share/maven...'
 echo "------------------------"
 sudo apt-cache search maven
