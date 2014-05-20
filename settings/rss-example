@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>etiCase - gruppo agenzie indipendenti - 43410</title>
+    <link>http://vps53043.ovh.net/scheda-agenzia/eticase-gruppo-agenzie-indipendenti-43410</link>
+    <description>etiCase - gruppo agenzie indipendenti</description>
+    <language>it</language>
+    <copyright>(c) cercacasa.it 2012</copyright>
+    <dc:date>2014-05-20T09:59:10Z</dc:date>
+    <dc:language>it</dc:language>
+    <dc:rights>(c) cercacasa.it 2012</dc:rights>
+    <item>
+      <title>prova terreno</title>
+      <link>http://vps53043.ovh.net/immobile/bologna/prova-terreno-1171070</link>
+      <description>prova descrizione terreno affitto</description>
+      <pubDate>Tue, 20 May 2014 09:36:57 GMT</pubDate>
+      <guid>http://vps53043.ovh.net/immobile/bologna/prova-terreno-1171070</guid>
+    </item>
+    <item>
+      <title>prova</title>
+      <link>http://vps53043.ovh.net/immobile/bologna/prova-1171068</link>
+      <description>prova desc</description>
+      <pubDate>Tue, 20 May 2014 09:36:57 GMT</pubDate>
+      <guid>http://vps53043.ovh.net/immobile/bologna/prova-1171068</guid>
+    </item>
+  </channel>
+</rss>
