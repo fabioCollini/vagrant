@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Eclipse
+Exec=env UBUNTU_MENUPROXY= eclipse
+Terminal=false
+Icon=/home/vagrant/Development/adt-bundle-linux-x86_64-20140321/eclipse/icon.xpm
+Type=Application
+Categories=IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=env UBUNTU_MENUPROXY= eclipse
+TargetEnvironment=Unity
