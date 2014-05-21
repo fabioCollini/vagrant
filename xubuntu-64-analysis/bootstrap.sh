@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'IMPORTANT!!! Set your bitbucket username and password to execute this script...'
-echo "------------------------"
-USERNAME_BITBUCKET="your_username"
-PASSWORD_BITBUCKET="your_password"
-
 echo 'Update packages list...'
 echo "------------------------"
 apt-get -y update
@@ -48,3 +43,9 @@ echo "------------------------"
 wget https://download.elasticsearch.org/logstash/logstash/logstash-1.4.1.tar.gz -P /tmp
 sudo tar zxvf /tmp/logstash-1.4.1.tar.gz -C /home/vagrant/Development
 
+echo 'Install Elasticsearch 1.1.1...'
+echo "------------------------"
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz -P /tmp/
+sudo tar zxvf /tmp/elasticsearch-1.1.1.tar.gz -C /home/vagrant/Development/
+sudo chmod 777 /home/vagrant/Development/ -R
+/home/vagrant/Development/elasticsearch-1.1.1/bin/plugin -install lmenezes/elasticsearch-kopf
